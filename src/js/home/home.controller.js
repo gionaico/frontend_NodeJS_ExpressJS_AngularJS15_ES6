@@ -1,10 +1,17 @@
 class HomeCtrl {
-  constructor(User, Tags, AppConstants, $scope) {
+  constructor(User, Tags, NgMap, AppConstants, $scope) {
     'ngInject';
 
     this.appName = AppConstants.appName;
     this._$scope = $scope;
 
+
+    var vm = this;
+    NgMap.getMap().then(function (map) {
+      vm.map = map;
+    });
+
+    
     // Get list of all tags
     Tags
       .getAll()

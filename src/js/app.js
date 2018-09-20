@@ -30,6 +30,7 @@ import './settings';
 import './editor';
 import './contact';
 import './listProd';
+import 'ngmap';
 
 
 // Create and bootstrap application
@@ -49,6 +50,7 @@ const requires = [
   'app.editor',
   'app.contact', 
   'app.listProd',
+  'ngMap',
   toastr,
   /* angularMaterialize */
   
